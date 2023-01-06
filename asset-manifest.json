@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.608bce5c.css",
-    "main.js": "/portfolio/static/js/main.cdb6bf36.js",
+    "main.css": "/portfolio/static/css/main.343f3834.css",
+    "main.js": "/portfolio/static/js/main.3e9c2ee6.js",
     "static/media/whitneybold.otf": "/portfolio/static/media/whitneybold.06895b8ac81a99798f1d.otf",
     "static/media/whitneysemibold.otf": "/portfolio/static/media/whitneysemibold.3eb3b8ffb7ce6e9bd0de.otf",
     "static/media/whitneybook.otf": "/portfolio/static/media/whitneybook.4812f96cb9a630349a71.otf",
     "static/media/whitneymedium.otf": "/portfolio/static/media/whitneymedium.cbc95f17e2ae0622f573.otf",
+    "static/media/loading.svg": "/portfolio/static/media/loading.1f02a5b489398343b89bd483947b4131.svg",
     "index.html": "/portfolio/index.html",
-    "main.608bce5c.css.map": "/portfolio/static/css/main.608bce5c.css.map",
-    "main.cdb6bf36.js.map": "/portfolio/static/js/main.cdb6bf36.js.map"
+    "main.343f3834.css.map": "/portfolio/static/css/main.343f3834.css.map",
+    "main.3e9c2ee6.js.map": "/portfolio/static/js/main.3e9c2ee6.js.map"
   },
   "entrypoints": [
-    "static/css/main.608bce5c.css",
-    "static/js/main.cdb6bf36.js"
+    "static/css/main.343f3834.css",
+    "static/js/main.3e9c2ee6.js"
   ]
 }
