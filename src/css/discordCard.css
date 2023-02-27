@@ -1,0 +1,197 @@
+.discordCardContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+@keyframes fadeInDiscordCard {
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.discordCard {
+  background-color: #131315;
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: 25px;
+  max-width: 310px;
+  transition: .5s;
+  /* height: 525px; */
+  opacity: 0;
+  transform: scale(1);
+
+  /* Animation */
+  animation-duration: 1s;
+  animation-name: fadeInDiscordCard;
+  animation-timing-function: ease;
+  animation-delay: .2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes expandDiscordCard {
+  0% {
+    transform: scale(1);
+    opacity: 100%;
+  }
+  50% {
+    
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.discordCardResume {
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  position: absolute;
+  animation-name: expandDiscordCard;
+}
+
+.discordCardHeader {
+  height: 100px;
+  width: 100%;
+  background-color: #683bda;
+  /* -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); */
+  opacity: .7;
+}
+
+.discordCardProfileArea {
+  height: 85px;
+  width: 85px;
+  border-radius: 100px;
+  background-color: #131315;
+  position: absolute;
+  top: 70px;
+  left: 15px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.discordCardProfileImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: #131315;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  background-color: #131315;
+  object-fit: cover;
+}
+
+.discordCardDetailArea {
+  flex: 1;
+  /* background-color: bisque; */
+  padding: 20px 15px;
+}
+
+.bannerName {
+  color: white;
+  font-size: 20px;
+  margin-top: 45px;
+  font-family: 'WhitneyBold';
+  margin-bottom: 15px;
+}
+
+.bannerNameTag {
+  color: #babbbe;
+}
+
+.bannerDivider {
+  background-color: #33353b;
+  height: 1px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.bannerSectionTitle {
+  color: #e5e7eb;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'WhitneyBold';
+  margin-top: 18px;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.bannerAbout {
+  margin-top: 10px;
+  font-family: 'WhitneyRegular';
+  font-size: 13px;
+  color: #e5e7eb;
+  line-height: 20px;
+}
+
+.connectionsBtn {
+  width: auto;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #24262a;
+  margin-top: 15px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.githubSVG {
+  fill: white;
+}
+
+.githubHandle {
+  font-family: 'WhitneySemiBold';
+  color: white;
+  margin-left: 10px;
+}
+
+.discordVerifiedSVG {
+  margin-left: 5px;
+}
+
+.githubRedirect {
+  transform: rotate(45deg);
+  margin-left: auto;
+}
+
+.connectionBtnLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.resumeBtn {
+  color: white;
+  position: absolute;
+  right: 15px;
+  top: 115px;
+  font-family: 'WhitneySemiBold';
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 1px solid #24262a;
+  font-size: 14px;
+}
+
+.resumeBtn:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .discordCard {
+    margin: auto;
+  }
+}
