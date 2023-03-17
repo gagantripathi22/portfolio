@@ -37,19 +37,19 @@
 }
 
 .scrollableArea {
-  width: 73%;
+  width: 65%;
   height: 100%;
   /* background-color: pink; */
   /* padding-right: 60px; */
 }
 
 .bioArea {
-  width: 22%;
+  width: 35%;
   height: 100%;
   /* background-color: blueviolet; */
   display: flex;
   align-items: center;
-  padding-left: 25px;
+  /* padding-left: 25px; */
   min-width: 300px;
   /* justify-content: center; */
 }
@@ -76,7 +76,7 @@
   .bioArea {
     width: 100%;
     padding-left: 0;
-    padding-top: 50px;
+    padding-top: 15px;
     padding-bottom: 20px;
   }
 }

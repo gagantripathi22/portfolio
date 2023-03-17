@@ -105,7 +105,7 @@ const ProjectsArea = () => {
 
   return (
     <div className='projectAreaContainer' ref={headingRef}>
-      <div className='heading' style={{left: window.innerWidth < 992 ? prox - 70 : prox - 60, top: proy + 520}}>Projects</div>
+      <div className='heading' style={{left: window.innerWidth < 992 ? prox - 75 : prox - 70, top: proy + 520}}>Projects</div>
       <div style={{height: 35}}>
         <div className='navBtn' style={{opacity: showUpArrow ? '1' : '0', cursor: isAnimating ? 'wait' : 'default'}} onClick={() => {prevProject();}}>
           <svg className='navBtnIcon navBtnIconRotate' height="28" fill='white' viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z"/>
