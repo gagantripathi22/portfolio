@@ -112,16 +112,24 @@
   z-index: 100;
 }
 
-.bannerName {
-  color: white;
-  font-size: 20px;
+.displayName {
+  color: #fff;
+  font-size: 22px;
   margin-top: 0px;
-  font-family: 'WhitneyBold';
+  font-family: 'WhitneyMedium';
+  margin-bottom: 5px;
+}
+
+.bannerName {
+  color: rgb(160, 165, 174);
+  font-size: 15px;
+  margin-top: 0px;
+  font-family: 'WhitneyMedium';
   margin-bottom: 15px;
 }
 
 .bannerNameTag {
-  color: #babbbe;
+  /* color: #babbbe; */
 }
 
 .bannerDivider {
