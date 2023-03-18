@@ -76,59 +76,141 @@
     }
 }
 
-.projectArea {
-    background-color: #131315;
-    /* height: 580px; */
-    height: 605px;
-    margin-left: 57px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+.projectAreaBorder {
+    height: 585px;
+    width: 92.5%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 25px;
-    width: 92.5%;
-    opacity: 100%;
-    transition-timing-function: ease;
-    /* border: 5px solid #36353a; */
-    border-width: 5px;
-    border-style: solid;
-    border-color: #311b55;
-    /* border-image: linear-gradient(to bottom, rgb(20 , 108, 244), rgb(140, 0, 99)) 1; */
+    margin-left: 57px;
+    padding: 5px;
+    border-radius: 10px;
+    /* background-image: linear-gradient(rgb(20 , 108, 244), rgb(140, 0, 99)); */
+    background-color: #292936;
+    /* cursor: pointer; */
 
     /* Animation */
     animation-duration: 1s;
     animation-name: fadeInCard;
     animation-timing-function: ease;
-    /* animation-delay: .5s; */
-    /* animation-fill-mode: both; */
+    transition: 1s;
 }
 
-.projectAreaNoAnimation {
+@keyframes expandAnimation {
+    0% {
+        padding: 0;
+    }
+    20% {
+        height: 100%;
+        width: 100%;
+    }
+    50% {
+        position: absolute;
+    }
+    100% {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.projectAreaBorderExpand {
+    position: absolute;
+    z-index: 500;
+    height: 585px;
+    width: 92.5%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    flex-direction: row;
+
+    animation-name: expandAnimation;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.projectAreaBorderExpand .projectArea {
+    flex-direction: row;
+    width: fit-content;
+    overflow: auto;
+    border-radius: 0;
+}
+
+.projectAreaBorderExpand .projectDetailsArea {
+    display: none;
+}
+
+.projectAreaBorderExpand .projectImageArea {
+    width: 85vw;
+    height: 80vh;
+}
+
+.projectAreaBorderExpand .projectImage {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.projectAreaBorderNoAnimation {
     animation-name: none;
 }
 
-.projectAreaTileUp {
+.projectAreaBorderTileUp {
     animation-name: animateTileUp;
     animation-duration: 2s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
 
-.projectAreaTileDown {
+.projectAreaBorderTileDown {
     animation-name: animateTileDown;
     animation-duration: 2s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
 
-.projectAreaMain {
+.projectAreaBorderMain {
     transition: .3s;
 }
 
+.projectArea {
+    background-color: #131315;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 100%;
+    transition-timing-function: ease;
+
+    /* Animation
+    animation-duration: 1s;
+    animation-name: fadeInCard;
+    animation-timing-function: ease; */
+
+    /* transition: 3s; */
+    /* position: absolute;
+    z-index: 500;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    border: none; */
+}
+
 .projectImageArea {
-    height: 70%;
+    height: 100%;
     width: 100%;
     background-color: #131315;
     background-position: top;
@@ -137,8 +219,20 @@
 }
 
 .projectImage {
-    max-width: 100%;
     display: block;
+    object-fit: cover;
+
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.projectNameAreaExpanded {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
 }
 
 .projectDetailsArea {
@@ -148,7 +242,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #00000000;
+    /* background: linear-gradient(rgba(0, 0, 0, 0), rgb(140, 0, 99)); */
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+    /* background-color: #131315e4; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    background-color: linear;
 }
 
 .projectDetailsAreaLeft {
@@ -160,9 +262,9 @@
 }
 
 .projectDetailGithubBtn {
-    width: 115px;
-    /* background-color: #eee; */
-    padding: 10px 15px;
+    width: 140px;
+    background-color: #15151a;
+    padding: 15px 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -179,8 +281,8 @@
 
 .projectDetailGithubBtnText {
     color: white;
-    font-family: 'WhitneySemiBold';
-    font-size: 15px;
+    font-family: 'WhitneyMedium';
+    font-size: 17px;
     margin-left: 10px;
     margin: 0;
     margin-bottom: 2px;
@@ -189,9 +291,11 @@
 
 .projectName {
     margin: 0;
-    color: white;
-    font-family: 'WhitneySemiBold';
+    color: rgb(238, 238, 238);
+    font-family: 'WhitneyBold';
     font-size: 30px;
+    margin-top: auto;
+    margin-bottom: 10px;
 }
 
 .projectAbout {
@@ -202,12 +306,14 @@
 .projectTechUsed {
     color: white;
     font-family: 'WhitneySemiBold';
+    margin-top: auto;
 }
 
 .projectTechUsedList {
     color: white;
     font-family: 'WhitneyRegular';
     margin-left: 7px;
+    margin-top: 202px;
 }
 
 /* .navBtn {
@@ -288,10 +394,162 @@
     will-change: transform;
 }
 
+@keyframes expandTitle {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 70px;
+    }
+}
+
+.projectNageBigContainer {
+    /* height: 0px; */
+    overflow: hidden;
+    
+}
+
+.projectNameBig {
+    /* position: absolute; */
+    margin: 0;
+    color: white;
+    font-size: 60px;
+    font-family: 'WhitneySemiBold';
+    left: 50px;
+    bottom: 6vh;
+    margin-left: 50px;
+    height: 0px;
+    animation: expandTitle 2s forwards .3s;
+}
+
+.scrollIndicator {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.scrollIndicatorText {
+    color: white;
+    font-family: 'WhitneyRegular';
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.scrollIndicatorFixedPosition {
+    height: 1px;
+    width: 70px;
+    /* background-color: white; */
+    margin-top: 1px;
+}
+
+@keyframes scrollIndicator {
+    0% {
+        opacity: 0;
+        width: 20%;
+    }
+    25% {
+        opacity: 1;
+        width: 100%;
+    }
+    70% {
+        margin-left: auto;
+    }
+    75% {
+        margin-left: auto;
+        width: 20%;
+    }
+    100% {
+        margin-left: auto;
+        opacity: 0;
+        /* margin-left: auto; */
+    }
+}
+
+.scrollIndicatorAnimator {
+    height: 100%;
+    width: 20%;
+    background-color: white;
+
+    animation-name: scrollIndicator;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    /* animation-fill-mode: forwards; */
+}
+
+.projectExpandDetail {
+    height: 100vh;
+    width: 900px;
+    background-color: #0d0d10;
+    padding: 60px 100px;
+}
+
+.projectExpandDetailTitle {
+    font-family: 'WhitneySemiBold';
+    color: white;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.projectExpandDetailDetail {
+    font-family: 'WhitneyRegular';
+    color: rgb(193, 193, 193);
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.expandExitBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+@keyframes exitBtnLeg1 {
+    from {
+        transform: rotate(-75deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes exitBtnLeg2 {
+    from {
+        transform: rotate(85deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+}
+
+.expandExitBtnLeg {
+    opacity: 0;
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: white;
+    transform: rotate(-75deg);
+    left: 50px;
+    animation: exitBtnLeg1 2s forwards .1s;
+}
+
+.expandExitBtnLegCw {
+    transform: rotate(85deg);
+    animation: exitBtnLeg2 2s forwards .1s;
+}
+
 @media (max-width: 1080px) {
-    .projectArea {
+    .projectAreaBorder {
         margin-left: 0;
-        width: 82%;
+        width: 78%;
         /* height: 375px; */
         height: 450px; /* new */
         margin-right: 0;
@@ -314,7 +572,7 @@
     }
 
     .projectImageArea {
-        height: auto; /* new */
+        height: 100%; /* new */
     }
 
     .projectImage {
@@ -323,6 +581,9 @@
         width: 100%;
         object-fit: cover;
         object-position: top;
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 100%;
     }
 
     .projectName {
@@ -344,11 +605,18 @@
     .projectAreaContainer {
         margin-bottom: 30px;
     }
+
+    .projectTechUsedList {
+        margin-top: 0;
+        margin-left: 0;
+        opacity: .8;
+    }
 }
 
 @media (max-width: 992px) {
-    .projectArea {
-        height: 375px;
+
+    .projectAreaBorder {
+        height: 330px;
     }
 
     .projectImageArea {

@@ -95,7 +95,7 @@ function DiscordCard() {
 						</>
 					}
 					<h5 className='bannerSectionTitle'>Note</h5>
-					<p className='bannerAbout'>This website is made with React and Firebase</p>
+					<p className='bannerAbout'>This website is made with React, Firebase % Lanyard API</p>
 					<h5 className='bannerSectionTitle'>Connections</h5>
 					<section className='connections'>
 							<div className='connectionsBtn'>
@@ -117,7 +117,7 @@ function DiscordCard() {
 									</a>
 								</div>
 							</div>
-						<div className='connectionsBtn'>
+						{/* <div className='connectionsBtn'>
 							<div className='connectionBtnLeft'>
 							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 								width="20" height="20" viewBox="0 0 192 192">
@@ -144,7 +144,7 @@ function DiscordCard() {
 									</svg>
 								</a>
 							</div>
-						</div>
+						</div> */}
 					</section>
 				</div>
 			</div>
