@@ -233,7 +233,8 @@
 }
 
 .statusIdle svg {
-  padding: 3px;
+  /* padding: 3px; */
+  margin: 4px 5px 0 0;
   transform: scaleX(-1);
 }
 

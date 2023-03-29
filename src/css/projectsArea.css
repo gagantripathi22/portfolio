@@ -1,4 +1,8 @@
 
+* {
+    cursor: none !important;
+}
+
 .projectAreaContainer {
     width: 100%;
     height: 100%;
@@ -94,6 +98,11 @@
     animation-name: fadeInCard;
     animation-timing-function: ease;
     transition: 1s;
+    cursor: none;
+}
+
+.projectAreaBorder:hover {
+    transform: scale(1.02);
 }
 
 @keyframes expandAnimation {
@@ -114,7 +123,7 @@
 }
 
 .projectAreaBorderExpand {
-    position: absolute;
+    position: absolute !important;
     z-index: 500;
     height: 585px;
     width: 92.5%;
@@ -127,6 +136,7 @@
     padding: 0;
     border-radius: 0;
     flex-direction: row;
+    transform: scale(1) !important;
 
     animation-name: expandAnimation;
     animation-duration: 3s;
@@ -190,23 +200,6 @@
     overflow: hidden;
     opacity: 100%;
     transition-timing-function: ease;
-
-    /* Animation
-    animation-duration: 1s;
-    animation-name: fadeInCard;
-    animation-timing-function: ease; */
-
-    /* transition: 3s; */
-    /* position: absolute;
-    z-index: 500;
-    height: 100%;
-    width: 100%;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: 0;
-    border: none; */
 }
 
 .projectImageArea {
@@ -544,6 +537,28 @@
 .expandExitBtnLegCw {
     transform: rotate(85deg);
     animation: exitBtnLeg2 2s forwards .1s;
+}
+
+.projectCustomCursor {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.765);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 600;
+    transition: 2s;
+}
+
+.projectCustomCursor span {
+    color: white;
+    font-family: 'WhitneyMedium';
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 3px;
 }
 
 @media (max-width: 1080px) {
