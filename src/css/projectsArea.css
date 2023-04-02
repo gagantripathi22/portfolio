@@ -1,312 +1,316 @@
-
 * {
-    cursor: none !important;
+  cursor: none !important;
 }
 
 .projectAreaContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* padding-left: 30px; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding-left: 30px; */
 }
 
 @keyframes fadeInCard {
-	0% {
-        transform: scale(1.05);
-        opacity: 0;
-	}
-	100% {
-        transform: scale(1);
-        opacity: 100%;
-	}
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 100%;
+  }
 }
 
 @keyframes animateTileUp {
-    0% {
-        transform: scale(1);
-    }
-    30% {
-        transform: scale(.9);
-        filter: blur(12px); -webkit-filter: blur(12px);
-    }
-    50% {
-        transform: scale(.9) translateY(-1050px);
-        opacity: 0;
-    }
-    51% {
-        transform: scale(.9) translateY(+1050px);
-        opacity: 0;
-    }
-    70% {
-        opacity: 30%;
-        filter: blur(12px); -webkit-filter: blur(12px);
-        transform: scale(.9) translateY(0px);
-    }
-    100% {
-        opacity: 100%;
-        transform: scale(1);
-        filter: blur(0px); -webkit-filter: blur(0px);
-    }
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.9);
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+  }
+  50% {
+    transform: scale(0.9) translateY(-1050px);
+    opacity: 0;
+  }
+  51% {
+    transform: scale(0.9) translateY(+1050px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 30%;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    transform: scale(0.9) translateY(0px);
+  }
+  100% {
+    opacity: 100%;
+    transform: scale(1);
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
 }
 
 @keyframes animateTileDown {
-    0% {
-        transform: scale(1);
-    }
-    30% {
-        transform: scale(.9);
-        filter: blur(12px); -webkit-filter: blur(12px);
-    }
-    50% {
-        transform: scale(.9) translateY(+1050px);
-        opacity: 0;
-    }
-    51% {
-        transform: scale(.9) translateY(-1050px);
-        opacity: 0;
-    }
-    70% {
-        opacity: 30%;
-        filter: blur(12px); -webkit-filter: blur(12px);
-        transform: scale(.9) translateY(0px);
-    }
-    100% {
-        opacity: 100%;
-        transform: scale(1);
-        filter: blur(0px); -webkit-filter: blur(0px);
-    }
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.9);
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+  }
+  50% {
+    transform: scale(0.9) translateY(+1050px);
+    opacity: 0;
+  }
+  51% {
+    transform: scale(0.9) translateY(-1050px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 30%;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    transform: scale(0.9) translateY(0px);
+  }
+  100% {
+    opacity: 100%;
+    transform: scale(1);
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
 }
 
 .projectAreaBorder {
-    height: 585px;
-    width: 92.5%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 25px;
-    margin-left: 57px;
-    padding: 5px;
-    border-radius: 10px;
-    /* background-image: linear-gradient(rgb(20 , 108, 244), rgb(140, 0, 99)); */
-    background-color: #292936;
-    /* cursor: pointer; */
+  height: 585px;
+  width: 92.5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 25px;
+  margin-left: 57px;
+  padding: 5px;
+  border-radius: 10px;
+  /* background-image: linear-gradient(rgb(20 , 108, 244), rgb(140, 0, 99)); */
+  background-color: #292936;
+  /* cursor: pointer; */
 
-    /* Animation */
-    animation-duration: 1s;
-    animation-name: fadeInCard;
-    animation-timing-function: ease;
-    transition: 1s;
-    cursor: none;
+  /* Animation */
+  animation-duration: 1s;
+  animation-name: fadeInCard;
+  animation-timing-function: ease;
+  transition: 1s;
+  cursor: none;
 }
 
 .projectAreaBorder:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 @keyframes expandAnimation {
-    0% {
-        padding: 0;
-    }
-    20% {
-        height: 100%;
-        width: 100%;
-    }
-    50% {
-        position: absolute;
-    }
-    100% {
-        height: 100%;
-        width: 100%;
-    }
+  0% {
+    padding: 0;
+  }
+  20% {
+    height: 100%;
+    width: 100%;
+  }
+  50% {
+    position: absolute;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .projectAreaBorderExpand {
-    position: absolute !important;
-    z-index: 500;
-    height: 585px;
-    width: 92.5%;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: 0;
-    border: none;
-    padding: 0;
-    border-radius: 0;
-    flex-direction: row;
-    transform: scale(1) !important;
+  position: absolute !important;
+  z-index: 500;
+  height: 585px;
+  width: 92.5%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  flex-direction: row;
+  transform: scale(1) !important;
 
-    animation-name: expandAnimation;
-    animation-duration: 3s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+  animation-name: expandAnimation;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 .projectAreaBorderExpand .projectArea {
-    flex-direction: row;
-    width: fit-content;
-    overflow: auto;
-    border-radius: 0;
+  flex-direction: row;
+  width: fit-content;
+  overflow: auto;
+  border-radius: 0;
 }
 
 .projectAreaBorderExpand .projectDetailsArea {
-    display: none;
+  display: none;
 }
 
 .projectAreaBorderExpand .projectImageArea {
-    width: 85vw;
-    height: 80vh;
+  width: 85vw;
+  height: 80vh;
 }
 
 .projectAreaBorderExpand .projectImage {
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .projectAreaBorderNoAnimation {
-    animation-name: none;
+  animation-name: none;
 }
 
 .projectAreaBorderTileUp {
-    animation-name: animateTileUp;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+  animation-name: animateTileUp;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 .projectAreaBorderTileDown {
-    animation-name: animateTileDown;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+  animation-name: animateTileDown;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 .projectAreaBorderMain {
-    transition: .3s;
+  transition: 0.3s;
 }
 
 .projectArea {
-    background-color: #131315;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    opacity: 100%;
-    transition-timing-function: ease;
+  background-color: #131315;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 100%;
+  transition-timing-function: ease;
 }
 
 .projectImageArea {
-    height: 100%;
-    width: 100%;
-    background-color: #131315;
-    background-position: top;
-    object-fit: cover;
-    overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: #131315;
+  background-position: top;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .projectImage {
-    display: block;
-    object-fit: cover;
+  display: block;
+  object-fit: cover;
 
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .projectNameAreaExpanded {
-    width: 100%;
-    height: 20vh;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
 }
 
 .projectDetailsArea {
-    flex: 1;
-    padding: 25px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    /* background: linear-gradient(rgba(0, 0, 0, 0), rgb(140, 0, 99)); */
-    background: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
-    /* background-color: #131315e4; */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 250px;
-    background-color: linear;
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background: linear-gradient(rgba(0, 0, 0, 0), rgb(140, 0, 99)); */
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  /* background-color: #131315e4; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background-color: linear;
 }
 
 .projectDetailsAreaLeft {
-
 }
 
 .projectDetailsAreaRight {
-    height: 100%;
+  height: 100%;
 }
 
 .projectDetailGithubBtn {
-    width: 140px;
-    background-color: #15151a;
-    padding: 15px 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 7px;
-    /* justify-content: center; */
-    text-decoration: none;
-    transition: .2s;
+  width: 140px;
+  background-color: #15151a;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 7px;
+  /* justify-content: center; */
+  text-decoration: none;
+  transition: 0.2s;
 }
 
 .projectDetailGithubBtn:hover {
-    background-color: #19191c;
-    cursor: pointer;
+  background-color: #19191c;
+  cursor: pointer;
 }
 
 .projectDetailGithubBtnText {
-    color: white;
-    font-family: 'WhitneyMedium';
-    font-size: 17px;
-    margin-left: 10px;
-    margin: 0;
-    margin-bottom: 2px;
-    margin-left: 12px;
+  color: white;
+  font-family: "WhitneyMedium";
+  font-size: 17px;
+  margin-left: 10px;
+  margin: 0;
+  margin-bottom: 2px;
+  margin-left: 12px;
 }
 
 .projectName {
-    margin: 0;
-    color: rgb(238, 238, 238);
-    font-family: 'WhitneyBold';
-    font-size: 30px;
-    margin-top: auto;
-    margin-bottom: 10px;
+  margin: 0;
+  color: rgb(238, 238, 238);
+  font-family: "WhitneyBold";
+  font-size: 30px;
+  margin-top: auto;
+  margin-bottom: 10px;
 }
 
 .projectAbout {
-    color: white;
-    font-family: 'WhitneyRegular';
+  color: white;
+  font-family: "WhitneyRegular";
 }
 
 .projectTechUsed {
-    color: white;
-    font-family: 'WhitneySemiBold';
-    margin-top: auto;
+  color: white;
+  font-family: "WhitneySemiBold";
+  margin-top: auto;
 }
 
 .projectTechUsedList {
-    color: white;
-    font-family: 'WhitneyRegular';
-    margin-left: 7px;
-    margin-top: 202px;
+  color: white;
+  font-family: "WhitneyRegular";
+  margin-left: 7px;
+  margin-top: 202px;
 }
 
 /* .navBtn {
@@ -322,319 +326,322 @@
 } */
 
 .navBtn {
-    height: 35px;
-    width: 150px;
-    background-color: #24242f;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-    z-index: 1000;
+  height: 35px;
+  width: 150px;
+  background-color: #24242f;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 1000;
 }
 
 .navBtn:hover {
-    /* background-color: #21212a; */
-    background-color: #292936;
-    transform: scale(1.085);
+  /* background-color: #21212a; */
+  background-color: #292936;
+  transform: scale(1.085);
 }
 
 .navBtnIconRotate {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .heading {
-    position: absolute;
-    font-size: 45px;
-    transform: rotate(-90deg);
-    text-transform: uppercase;
-    font-family: 'WhitneyBold';
-    color: #8c8cb0;
-    z-index: -100;
+  position: absolute;
+  font-size: 45px;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  font-family: "WhitneyBold";
+  color: #8c8cb0;
+  z-index: -100;
 }
 
 @keyframes spinner {
-    0% {
-        transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-        transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    }
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
 }
 
 .spinContainer {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .spin::before {
-    animation: 1.5s linear infinite spinner;
-    animation-play-state: inherit;
-    border: solid 5px #737373;
-    border-bottom-color: #d4d4d4;
-    border-radius: 50%;
-    content: "";
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    will-change: transform;
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #737373;
+  border-bottom-color: #d4d4d4;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
 }
 
 @keyframes expandTitle {
-    from {
-        height: 0px;
-    }
-    to {
-        height: 70px;
-    }
+  from {
+    height: 0px;
+  }
+  to {
+    height: 70px;
+  }
 }
 
 .projectNageBigContainer {
-    /* height: 0px; */
-    overflow: hidden;
-    
+  /* height: 0px; */
+  overflow: hidden;
 }
 
 .projectNameBig {
-    /* position: absolute; */
-    margin: 0;
-    color: white;
-    font-size: 60px;
-    font-family: 'WhitneySemiBold';
-    left: 50px;
-    bottom: 6vh;
-    margin-left: 50px;
-    height: 0px;
-    animation: expandTitle 2s forwards .3s;
+  /* position: absolute; */
+  margin: 0;
+  color: white;
+  font-size: 60px;
+  font-family: "WhitneySemiBold";
+  left: 50px;
+  bottom: 6vh;
+  margin-left: 50px;
+  height: 0px;
+  animation: expandTitle 2s forwards 0.3s;
 }
 
 .scrollIndicator {
-    margin-right: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .scrollIndicatorText {
-    color: white;
-    font-family: 'WhitneyRegular';
-    font-size: 13px;
-    margin-right: 10px;
+  color: white;
+  font-family: "WhitneyRegular";
+  font-size: 13px;
+  margin-right: 10px;
 }
 
 .scrollIndicatorFixedPosition {
-    height: 1px;
-    width: 70px;
-    /* background-color: white; */
-    margin-top: 1px;
+  height: 1px;
+  width: 70px;
+  /* background-color: white; */
+  margin-top: 1px;
 }
 
 @keyframes scrollIndicator {
-    0% {
-        opacity: 0;
-        width: 20%;
-    }
-    25% {
-        opacity: 1;
-        width: 100%;
-    }
-    70% {
-        margin-left: auto;
-    }
-    75% {
-        margin-left: auto;
-        width: 20%;
-    }
-    100% {
-        margin-left: auto;
-        opacity: 0;
-        /* margin-left: auto; */
-    }
+  0% {
+    opacity: 0;
+    width: 20%;
+  }
+  25% {
+    opacity: 1;
+    width: 100%;
+  }
+  70% {
+    margin-left: auto;
+  }
+  75% {
+    margin-left: auto;
+    width: 20%;
+  }
+  100% {
+    margin-left: auto;
+    opacity: 0;
+    /* margin-left: auto; */
+  }
 }
 
 .scrollIndicatorAnimator {
-    height: 100%;
-    width: 20%;
-    background-color: white;
+  height: 100%;
+  width: 20%;
+  background-color: white;
 
-    animation-name: scrollIndicator;
-    animation-iteration-count: infinite;
-    animation-duration: 2.5s;
-    animation-timing-function: ease;
-    /* animation-fill-mode: forwards; */
+  animation-name: scrollIndicator;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+  /* animation-fill-mode: forwards; */
 }
 
 .projectExpandDetail {
-    height: 100vh;
-    width: 900px;
-    background-color: #0d0d10;
-    padding: 60px 100px;
+  height: 100vh;
+  width: 900px;
+  background-color: #0d0d10;
+  padding: 60px 100px;
 }
 
 .projectExpandDetailTitle {
-    font-family: 'WhitneySemiBold';
-    color: white;
-    margin: 0;
-    font-size: 40px;
-    margin-bottom: 50px;
+  font-family: "WhitneySemiBold";
+  color: white;
+  margin: 0;
+  font-size: 40px;
+  margin-bottom: 50px;
 }
 
 .projectExpandDetailDetail {
-    font-family: 'WhitneyRegular';
-    color: rgb(193, 193, 193);
-    font-size: 25px;
-    margin-top: 10px;
+  font-family: "WhitneyRegular";
+  color: rgb(193, 193, 193);
+  font-size: 25px;
+  margin-top: 10px;
 }
 
 .expandExitBtn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 100px;
-    width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 100px;
+  width: 100px;
 }
 
 @keyframes exitBtnLeg1 {
-    from {
-        transform: rotate(-75deg);
-        opacity: 0;
-    }
-    to {
-        transform: rotate(45deg);
-        opacity: 1;
-    }
+  from {
+    transform: rotate(-75deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
 }
 
 @keyframes exitBtnLeg2 {
-    from {
-        transform: rotate(85deg);
-        opacity: 0;
-    }
-    to {
-        transform: rotate(-45deg);
-        opacity: 1;
-    }
+  from {
+    transform: rotate(85deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
 }
 
 .expandExitBtnLeg {
-    opacity: 0;
-    position: absolute;
-    width: 2px;
-    height: 100px;
-    background-color: white;
-    transform: rotate(-75deg);
-    left: 50px;
-    animation: exitBtnLeg1 2s forwards .1s;
+  opacity: 0;
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  transform: rotate(-75deg);
+  left: 50px;
+  animation: exitBtnLeg1 2s forwards 0.1s;
 }
 
 .expandExitBtnLegCw {
-    transform: rotate(85deg);
-    animation: exitBtnLeg2 2s forwards .1s;
+  transform: rotate(85deg);
+  animation: exitBtnLeg2 2s forwards 0.1s;
 }
 
 .projectCustomCursor {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    background-color: rgba(0, 0, 0, 0.765);
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 600;
-    transition: 2s;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.765);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 600;
+  transition: 2s;
 }
 
 .projectCustomCursor span {
-    color: white;
-    font-family: 'WhitneyMedium';
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-left: 3px;
+  color: white;
+  font-family: "WhitneyMedium";
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-left: 3px;
 }
 
 @media (max-width: 1080px) {
-    .projectAreaBorder {
-        margin-left: 0;
-        width: 78%;
-        /* height: 375px; */
-        height: 450px; /* new */
-        margin-right: 0;
-    }
+  .projectAreaBorder {
+    margin-left: 0;
+    width: 78%;
+    /* height: 375px; */
+    height: 450px; /* new */
+    margin-right: 0;
+  }
 
-    .projectDetailsArea {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .projectDetailsArea {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 88px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+  }
 
-    .projectDetailsAreaRight {
-        display: flex;
-        flex-direction: row;
-    }
+  .projectDetailsAreaRight {
+    display: flex;
+    flex-direction: row;
+  }
 
-    .projectDetailGithubBtn {
-        padding: 10px 0;
-        width: auto;
-        margin-right: 25px;
-    }
+  .projectDetailGithubBtn {
+    padding: 10px 0;
+    width: auto;
+    margin-right: 25px;
+  }
 
-    .projectImageArea {
-        height: 100%; /* new */
-    }
+  .projectImageArea {
+    height: 100%; /* new */
+  }
 
-    .projectImage {
-        max-width: auto;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: top;
-        min-width: 100%;
-        min-height: 100%;
-        max-width: 100%;
-    }
+  .projectImage {
+    max-width: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+  }
 
-    .projectName {
-        font-size: 20px;
-    }
+  .projectName {
+    font-size: 20px;
+    margin-top: 0;
+  }
 
-    .projectAbout {
-        font-size: 13px;
-    }
+  .projectAbout {
+    font-size: 13px;
+  }
 
-    .projectTechUsed {
-        font-size: 15px;
-    }
+  .projectTechUsed {
+    font-size: 15px;
+  }
 
-    .projectDetailGithubBtnText {
-        font-size: 15px;
-    }
+  .projectDetailGithubBtnText {
+    font-size: 15px;
+  }
 
-    .projectAreaContainer {
-        margin-bottom: 30px;
-    }
+  .projectAreaContainer {
+    margin-bottom: 30px;
+  }
 
-    .projectTechUsedList {
-        margin-top: 0;
-        margin-left: 0;
-        opacity: .8;
-    }
+  .projectTechUsedList {
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: 992px) {
+  .projectAreaBorder {
+    height: 330px;
+  }
 
-    .projectAreaBorder {
-        height: 330px;
-    }
-
-    .projectImageArea {
-        height: auto; /* new */
-    }
+  .projectImageArea {
+    height: 100%; /* new */
+  }
 }
