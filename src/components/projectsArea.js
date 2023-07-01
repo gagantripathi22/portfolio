@@ -312,6 +312,7 @@ const ProjectsArea = () => {
                   {projects[currentProject].data.github ? (
                     <a
                       href={projects[currentProject].data.github}
+                      style={{ marginRight: 20 }}
                       target="_blank"
                       className="projectDetailGithubBtn"
                     >
