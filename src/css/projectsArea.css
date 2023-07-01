@@ -479,6 +479,8 @@
   width: 900px;
   background-color: #0d0d10;
   padding: 60px 100px;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 .projectExpandDetailTitle {
@@ -562,6 +564,12 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-left: 3px;
+}
+
+.linksBtnContainer {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
 }
 
 @media (max-width: 1080px) {
