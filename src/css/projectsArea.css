@@ -1,5 +1,5 @@
 * {
-  cursor: none !important;
+  /* cursor: none !important; */
 }
 
 .projectAreaContainer {
@@ -103,7 +103,7 @@
   animation-name: fadeInCard;
   animation-timing-function: ease;
   transition: 1s;
-  cursor: none;
+  /* cursor: none; */
 }
 
 .projectAreaBorder:hover {

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import "../css/projectsArea.css";
 import fetchProjects from "../services/fetchProjects";
 import { useHorizontalScroll } from "../services/useSideScroll";
-import CustomCursor from "../services/CustomCursor";
+// import CustomCursor from "../services/CustomCursor";
 
 const ProjectsArea = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -167,9 +167,9 @@ const ProjectsArea = () => {
 
   return (
     <div className="projectAreaContainer" ref={headingRef}>
-      {window.innerWidth > 992 && (
+      {/* {window.innerWidth > 992 && (
         <CustomCursor cursorSize={showBigCursor ? 90 : 20} />
-      )}
+      )} */}
       <div
         className="heading"
         style={{
